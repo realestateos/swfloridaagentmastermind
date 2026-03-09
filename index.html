@@ -35,8 +35,8 @@
                 "@type": "Schedule",
                 "repeatFrequency": "P1M",
                 "byDay": "3TH",
-                "startTime": "12:30",
-                "endTime": "15:00",
+                "startTime": "10:00",
+                "endTime": "12:00",
                 "scheduleTimezone": "America/New_York"
             },
             "location": {
@@ -256,7 +256,7 @@
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">When</h3>
                     <p class="text-gray-600">Every 3rd Thursday</p>
-                    <p class="text-brand-600 font-semibold">12:30 PM – 3:00 PM EST</p>
+                    <p class="text-brand-600 font-semibold">10:00 AM – 12:00 PM EST</p>
                 </div>
                 
                 <!-- Where -->
@@ -371,8 +371,8 @@
                         <p class="text-cyan-200 text-sm">Thursday</p>
                     </div>
                     <div>
-                        <p class="text-3xl sm:text-4xl font-bold text-sunset-400 mb-1">12:30</p>
-                        <p class="text-cyan-200 text-sm">PM Start</p>
+                        <p class="text-3xl sm:text-4xl font-bold text-sunset-400 mb-1">10:00</p>
+                        <p class="text-cyan-200 text-sm">AM Start</p>
                     </div>
                     <div>
                         <p class="text-3xl sm:text-4xl font-bold text-sunset-400 mb-1">FREE</p>
@@ -439,7 +439,7 @@
             const currentMonth = now.getMonth();
             const currentYear = now.getFullYear();
             
-            let targetDate = new Date(currentYear, currentMonth, 1, 12, 30, 0);
+            let targetDate = new Date(currentYear, currentMonth, 1, 10, 0, 0);
             let thursdayCount = 0;
             
             while (targetDate.getMonth() === currentMonth) {
@@ -462,7 +462,7 @@
                 nextYear++;
             }
             
-            targetDate = new Date(nextYear, nextMonth, 1, 12, 30, 0);
+            targetDate = new Date(nextYear, nextMonth, 1, 10, 0, 0);
             thursdayCount = 0;
             
             while (targetDate.getMonth() === nextMonth) {
@@ -494,7 +494,7 @@
             document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
             
             const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
-            document.getElementById('next-date').textContent = nextDate.toLocaleDateString('en-US', options) + ' at 12:30 PM EST';
+            document.getElementById('next-date').textContent = nextDate.toLocaleDateString('en-US', options) + ' at 10:00 AM EST';
         }
         
         updateCountdown();
