@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Sitemap location
 Sitemap: https://swfloridaagentmastermind.com/sitemap.xml
+
+# Crawl delay for bots
+Crawl-delay: 1
